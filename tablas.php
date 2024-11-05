@@ -36,8 +36,8 @@
 
 
     <?php    
-    include "forma.php"; 
-    require "forme.php";    
+    include "form.php"; 
+    // require "form.php";    
        ?>
 
 </body>
