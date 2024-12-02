@@ -36,7 +36,7 @@ $consulta = $conexion->query("SELECT * FROM users");
                     <td> <?=$user->email;?> </td>
                     <td>
                         <form action="editar.php" method="get">
-                            <input type="hidden" name="user_id" id="id">
+                            <input type="hidden" name="user_id" id="id" value="<?=$user->id?>">
                             <button type="submit">Editar</button>
                         </form>
                     </td>

@@ -1,3 +1,7 @@
+<?php
+include "../conexion.php";
+$user = $conexion->query("SELECT * FROM users WHERE id=$_REQUEST[user_id] ")->fetch_object();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +13,13 @@
 <body>
     <h1>Editar Usuario</h1>
     <a href="listar.php">Regresar</a>
-    
+
     <form action="../MODELO/update.php" method="post">
         <label for="name">Nombres</label>
-        <input type="text" name="names" id="name">
+        <input type="text" name="names" id="name" value="<?=$user->names?>">
 
         <label for="lastname">Apellidos</label>
-        <input type="text" name="lastnames" id="lastname">
+        <input type="text" name="lastnames" id="lastname" value="<?=$user->lastnames?>" >
         
         <label for="document">Documento</label>
         <input type="text" name="document" id="document">
