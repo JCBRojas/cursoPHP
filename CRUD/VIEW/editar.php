@@ -22,13 +22,13 @@ $user = $conexion->query("SELECT * FROM users WHERE id=$_REQUEST[user_id] ")->fe
         <input type="text" name="lastnames" id="lastname" value="<?=$user->lastnames?>" >
         
         <label for="document">Documento</label>
-        <input type="text" name="document" id="document">
+        <input type="text" name="document" id="document" value="<?=$user->document?>" disabled >
 
         <label for="phone">Telefono</label>
-        <input type="text" name="phone" id="phone">
+        <input type="text" name="phone" id="phone" value="<?=$user->phone?>" >
 
         <label for="email">Correo</label>
-        <input type="email" name="email" id="imail">
+        <input type="email" name="email" id="imail" value="<?=$user->email?>" >
 
         <button type="submit">Actualizar</button>
     </form>
